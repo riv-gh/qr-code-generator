@@ -1,13 +1,21 @@
 {
-  "name": "express-ejs-test",
+  "name": "wifi-qr-code",
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
-  "author": "",
+  "author": "daenur <daenur@outlook.com>",
   "license": "ISC",
-  "description": "",
+  "keywords": [
+    "wifi",
+    "qr",
+    "code",
+    "generator",
+    "express",
+    "ejs"
+  ],
+  "description": "simple page to generate wifi qr code",
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^5.1.0"
