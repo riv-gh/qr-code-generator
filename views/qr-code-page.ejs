@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>QR-код для Wi‑Fi підключення до <%= ssid %></title>
+  <script src="/qrcode.min.js"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>QR-код для Wi‑Fi підключення</h1>
+    <div>
+      <p>Назва мережі (SSID): <span id="ssid-text"></span></p>
+      <p>Пароль: <span id="password-text"></span></p>
+    </div>
+    <div id="qrcode"></div>
+  </div>
+  
+  <script>
+    
+    const ssid = '<%= ssid %>';
+    const password = '<%= password %>';
+    
+    document.getElementById('ssid-text').textContent = ssid;
+    document.getElementById('password-text').textContent = password;
+    
+    const wifiString = `WIFI:T:WPA;S:${ssid};P:${password};;`;
+    
+
+    new QRCode(document.getElementById("qrcode"), {
+      text: wifiString,
+      width: 256,
+      height: 256,
+      colorDark: "#000000",
+      colorLight: "#ffffff",
+      correctLevel: QRCode.CorrectLevel.H
+    });
+  </script>
+</body>
+</html>
