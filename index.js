@@ -18,10 +18,7 @@ app.get('/:ssid/', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    const ssid = req.query.ssid;
-    const password = req.query.password;
-    
-    res.render('index', { ssid, password });
+    res.render('index');
 });
 
 app.listen(PORT, () => {

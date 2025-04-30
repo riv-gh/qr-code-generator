@@ -13,7 +13,17 @@
           <p>Назва мережі (SSID):<br><input id="ssid-text" placeholder="ssid" value="ssid" /></p>
           <p>Пароль:<br><input id="password-text" placeholder="P@$$w0rd" value="P@$$w0rd"/></p>
         </div>
-        <div id="qrcode"></div>
+        <div>
+            <a href="/ssid/?password=P@$$w0rd" id="link-button">Перейти на сторінку</a>
+        </div>
     </div> 
+    <script>
+        const link = document.getElementById('link-button');
+        const ssidInput = document.getElementById('ssid-text');
+        const passwordInput = document.getElementById('password-text');
+        document.addEventListener('keyup', (event) => {
+            link.href=`/${ssidInput.value}/?password=${passwordInput.value}`;
+        });
+    </script>
 </body>
 </html>

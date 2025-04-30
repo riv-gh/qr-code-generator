@@ -61,3 +61,25 @@ input {
 input:focus {
     border-color: #009dff;
 }
+
+a#link-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    background-color: #00588f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+a#link-button:hover {
+    background-color: #00385b;
+    transform: scale(1.05);
+}
+
+a#link-button:active {
+    transform: scale(0.95);
+}
